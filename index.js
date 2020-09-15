@@ -26,12 +26,17 @@ function processFirstItem(stringList, callback) {
 /* Task 1: `counterMaker`
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
+ * . 
  * 1. What is the difference between counter1 and counter2?
+ *    counter 1 is an instance of the function counterMaker(). 
+ *    counter 2 is its own function. 
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ *    counter1 uses closure -- the function counter() is inside of 
+ *    the function counterMaker(). 
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ *      counter1 would be preferable if any changes needed to be made to the starting point
 */
 
 // counter1 code
@@ -56,11 +61,14 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning() {
 
-    /*Code Here*/
+  return Math.floor(Math.random() * 2)
 
 }
+
+
+//console.log(inning())
 
 /* Task 3: finalScore()
 
@@ -74,15 +82,26 @@ finalScore(inning, 9) might return:
   "Away": 5,
 }
 
-*/ 
+*/
 
-function finalScore(/*code Here*/){
+function finalScore(inning, whatInning) {
 
-  /*Code Here*/
+  let homeScore = 0;
+  let awayScore = 0;
+  for (let i = 0; i < whatInning; i++) {
+
+    homeScore += inning()
+    awayScore += inning()
+  }
+  return {
+    "Home": homeScore,
+    "Away": awayScore
+  }
 
 }
+//console.log(finalScore(inning,9))
 
-/* Task 4: 
+/* Task 4:
 
 Create a function called `scoreboard` that accepts the following parameters: 
 
@@ -104,8 +123,17 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(inning, whatInning) {
+  let score = []
+  let homeTeamtotal = 0
+  let awayTeamtotal = 0
+  for (let i = 0; i < whatInning; i++) {
+    let homeScore = inning()
+    awaytotal += awayScore
+    if (i === 0) {
+
+    }
+  }
 }
 
 

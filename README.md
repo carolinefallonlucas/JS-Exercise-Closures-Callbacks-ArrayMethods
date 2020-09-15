@@ -42,6 +42,8 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure allows functions to be put together. They allow us to access the scope of the outer function from the inner function.  
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +65,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+Closure is used 
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+The string would stay the same, while the number would change. 
+
 c. What is the lexical scope of `newRoll`? 
+
 
 ### Task 3 - Stretch Goals
 
